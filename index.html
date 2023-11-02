@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Belajar Node.js</title>
+</head>
+<body>
+  <h1>Input Data</h1>
+  <form action="/saveData" method="post">
+    Nama: <input type="text" name="nama"><br>
+    Alamat: <input type="text" name="alamat"><br>
+    Pekerjaan: <input type="text" name="pekerjaan"><br>
+    <input type="submit" value="Simpan">
+  </form>
+
+  <h1>Data Tersimpan</h1>
+  <button onclick="getData()">Tampilkan Data</button>
+  <div id="data"></div>
+  <script>
+    function getData() {
+      fetch('/getData')
+        .then(response => response.json())
+        .then(data => {
+          const dataDiv = document.getElementById('data');
+          dataDiv.innerHTML = JSON.stringify(data, null, 2);
+        });
+    }
+  </script>
+</body>
+</html>

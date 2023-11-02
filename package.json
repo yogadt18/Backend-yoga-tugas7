@@ -1,0 +1,21 @@
+{
+  "name": "backend-yoga",
+  "version": "1.0.0",
+  "description": "yoga",
+  "main": "index.js",
+  "scripts": {
+    "test": "yoga"
+  },
+  "repository": {
+    "type": "git",
+    "url": "yogadt"
+  },
+  "keywords": [
+    "123"
+  ],
+  "author": "yoga",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
